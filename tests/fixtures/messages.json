@@ -1,0 +1,963 @@
+{
+ "made": "by tests/fixtures/make.mjs with the published @intomind/sdk, protocol 1.4",
+ "uuids": {
+  "1": "f3a10001-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "2": "f3a10002-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "3": "f3a10003-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "4": "f3a10004-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "5": "f3a10005-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "6": "f3a10006-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "7": "f3a10007-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "8": "f3a10008-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "9": "f3a10009-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "10": "f3a1000a-2c4b-4d1e-9a6f-1b2c3d4e5f60",
+  "11": "f3a1000b-2c4b-4d1e-9a6f-1b2c3d4e5f60"
+ },
+ "requests": [
+  {
+   "name": "start_stream",
+   "arg": null,
+   "hex": "01"
+  },
+  {
+   "name": "stop_stream",
+   "arg": null,
+   "hex": "02"
+  },
+  {
+   "name": "set_rate",
+   "arg": 1,
+   "hex": "1001"
+  },
+  {
+   "name": "set_gain",
+   "arg": 1,
+   "hex": "1101"
+  },
+  {
+   "name": "set_mode",
+   "arg": 1,
+   "hex": "2001"
+  },
+  {
+   "name": "set_leadoff",
+   "arg": 1,
+   "hex": "3001"
+  },
+  {
+   "name": "time_sync",
+   "arg": null,
+   "hex": "40"
+  },
+  {
+   "name": "set_samples_per_packet",
+   "arg": 1,
+   "hex": "4101"
+  },
+  {
+   "name": "get_battery",
+   "arg": null,
+   "hex": "42"
+  },
+  {
+   "name": "get_boot_info",
+   "arg": null,
+   "hex": "43"
+  },
+  {
+   "name": "reset_epoch",
+   "arg": null,
+   "hex": "50"
+  },
+  {
+   "name": "clear_bonds",
+   "arg": null,
+   "hex": "53"
+  },
+  {
+   "name": "set_predictions",
+   "arg": 1,
+   "hex": "8001"
+  },
+  {
+   "name": "select_head",
+   "arg": 1,
+   "hex": "8101"
+  },
+  {
+   "name": "list_heads",
+   "arg": null,
+   "hex": "82"
+  },
+  {
+   "name": "remove_head",
+   "arg": 1,
+   "hex": "8301"
+  },
+  {
+   "name": "get_model_info",
+   "arg": null,
+   "hex": "84"
+  },
+  {
+   "name": "set_prediction_input",
+   "arg": [
+    1,
+    2
+   ],
+   "hex": "850102"
+  },
+  {
+   "name": "get_prediction_input",
+   "arg": null,
+   "hex": "86"
+  },
+  {
+   "name": "set_bias",
+   "arg": 1,
+   "hex": "3201"
+  },
+  {
+   "name": "get_bias_diagnostic",
+   "arg": null,
+   "hex": "33"
+  },
+  {
+   "name": "get_pipeline_catalog",
+   "arg": null,
+   "hex": "90"
+  },
+  {
+   "name": "get_pipeline",
+   "arg": null,
+   "hex": "91"
+  },
+  {
+   "name": "set_pipeline",
+   "arg": [
+    1,
+    2
+   ],
+   "hex": "920102"
+  },
+  {
+   "name": "clear_pipeline",
+   "arg": null,
+   "hex": "93"
+  },
+  {
+   "name": "restore_pipeline_default",
+   "arg": null,
+   "hex": "94"
+  },
+  {
+   "name": "get_converter_registers",
+   "arg": null,
+   "hex": "34"
+  },
+  {
+   "name": "get_indicator",
+   "arg": null,
+   "hex": "44"
+  },
+  {
+   "name": "set_indicator",
+   "arg": 1,
+   "hex": "4501"
+  },
+  {
+   "name": "identify",
+   "arg": 1,
+   "hex": "4601"
+  },
+  {
+   "name": "set_embeddings",
+   "arg": 1,
+   "hex": "8701"
+  },
+  {
+   "name": "set_model_interval",
+   "arg": [
+    1,
+    2
+   ],
+   "hex": "880102"
+  },
+  {
+   "name": "get_model_interval",
+   "arg": null,
+   "hex": "89"
+  },
+  {
+   "name": "get_name",
+   "arg": null,
+   "hex": "47"
+  },
+  {
+   "name": "set_name",
+   "arg": [
+    1,
+    2
+   ],
+   "hex": "480102"
+  },
+  {
+   "name": "list_head_encoders",
+   "arg": null,
+   "hex": "8a"
+  },
+  {
+   "name": "soft_reset",
+   "arg": null,
+   "hex": "f0"
+  }
+ ],
+ "bad_requests": [
+  {
+   "name": "select_head",
+   "arg": null,
+   "error": "Invalid"
+  },
+  {
+   "name": "start_stream",
+   "arg": 1,
+   "error": "Invalid"
+  },
+  {
+   "name": "not an opcode",
+   "arg": null,
+   "error": "Invalid"
+  }
+ ],
+ "responses": [
+  {
+   "name": "ok with a payload",
+   "hex": "8200010203",
+   "expect": {
+    "opcode": 130,
+    "status": 0,
+    "payload": "010203",
+    "ok": true,
+    "status_name": "ok"
+   }
+  },
+  {
+   "name": "refused on USB power",
+   "hex": "0107",
+   "expect": {
+    "opcode": 1,
+    "status": 7,
+    "payload": "",
+    "ok": false,
+    "status_name": "usb power"
+   }
+  },
+  {
+   "name": "a status no version defines",
+   "hex": "8009",
+   "expect": {
+    "opcode": 128,
+    "status": 9,
+    "payload": "",
+    "ok": false,
+    "status_name": "undefined status 9"
+   }
+  }
+ ],
+ "device_info": [
+  {
+   "name": "the current layout",
+   "hex": "0104010203041840420f0087d61200851207000123456789abcdef5004050600fedcba98765432100b00de00050d04050a1a4d0038900d007f9698000000000000000000000000000000000001000000",
+   "expect": {
+    "protocol": [
+     1,
+     4
+    ],
+    "firmware": [
+     1,
+     2,
+     3
+    ],
+    "channels": 4,
+    "adc_bits": 24,
+    "tick_hz": 1000000,
+    "vref_uv": 1234567,
+    "capabilities": 4741,
+    "supported_rates": 7,
+    "device_id": "0123456789abcdef",
+    "hardware": [
+     4,
+     5,
+     6
+    ],
+    "build_id": "fedcba9876543210",
+    "model_embed_dim": 11,
+    "model_native_sps": 222,
+    "model_window_samples": 3333,
+    "head_slots": 4,
+    "head_max_outputs": 5,
+    "head_slot_bytes": 6666,
+    "update_chunk_max": 77,
+    "app_slot_bytes": 888888,
+    "weights_image_bytes": 9999999,
+    "capabilities_high": 1
+   },
+   "can": {
+    "battery_voltage": true,
+    "battery_low_flag": false,
+    "leadoff": true,
+    "test_signal": false,
+    "dcdc_mode": false,
+    "input_short": false,
+    "update": false,
+    "model": true,
+    "model_ready": false,
+    "heads": true,
+    "pipeline": false,
+    "bias_drive": false,
+    "embeddings": true,
+    "indicator": false,
+    "converter_registers": false,
+    "model_cadence": false,
+    "synthetic": true,
+    "device_name": false,
+    "not a capability": false
+   },
+   "rates": [
+    250,
+    500,
+    1000
+   ],
+   "microvolts_per_count": {
+    "1": 0.14717185497283936,
+    "6": 0.024528642495473225,
+    "24": 0.006132160623868306
+   }
+  },
+  {
+   "name": "the first layout",
+   "hex": "00010708090418e8030000b1cb740004000200a1a2a3a4a5a6a7a8",
+   "expect": {
+    "protocol": [
+     0,
+     1
+    ],
+    "firmware": [
+     7,
+     8,
+     9
+    ],
+    "channels": 4,
+    "adc_bits": 24,
+    "tick_hz": 1000,
+    "vref_uv": 7654321,
+    "capabilities": 4,
+    "supported_rates": 2,
+    "device_id": "a1a2a3a4a5a6a7a8",
+    "hardware": null,
+    "build_id": null,
+    "model_embed_dim": 0,
+    "model_native_sps": 0,
+    "model_window_samples": 0,
+    "head_slots": 0,
+    "head_max_outputs": 0,
+    "head_slot_bytes": 0,
+    "update_chunk_max": 0,
+    "app_slot_bytes": 0,
+    "weights_image_bytes": 0,
+    "capabilities_high": 0
+   },
+   "can": {
+    "battery_voltage": false,
+    "battery_low_flag": false,
+    "leadoff": true,
+    "test_signal": false,
+    "dcdc_mode": false,
+    "input_short": false,
+    "update": false,
+    "model": false,
+    "model_ready": false,
+    "heads": false,
+    "pipeline": false,
+    "bias_drive": false,
+    "embeddings": false,
+    "indicator": false,
+    "converter_registers": false,
+    "model_cadence": false,
+    "synthetic": false,
+    "device_name": false,
+    "not a capability": false
+   },
+   "rates": [
+    500
+   ],
+   "microvolts_per_count": {
+    "1": 0.9124661684036255,
+    "6": 0.1520776947339376,
+    "24": 0.0380194236834844
+   }
+  }
+ ],
+ "status": [
+  {
+   "name": "streaming",
+   "hex": "010006050057050203004d00",
+   "expect": {
+    "streaming": true,
+    "mode": "normal",
+    "gain": 24,
+    "sample_rate_hz": 500,
+    "charger": "no input",
+    "battery_percent": 87,
+    "leadoff": 5,
+    "usb_present": false,
+    "buffer_high_watermark": true,
+    "dropped_total": 3,
+    "buffer_fill": 77
+   }
+  },
+  {
+   "name": "charging, codes no version defines",
+   "hex": "0002090109ff0001ffff0000",
+   "expect": {
+    "streaming": false,
+    "mode": "short",
+    "gain": null,
+    "sample_rate_hz": null,
+    "charger": "charger state 9",
+    "battery_percent": null,
+    "leadoff": 0,
+    "usb_present": true,
+    "buffer_high_watermark": false,
+    "dropped_total": 65535,
+    "buffer_fill": 0
+   }
+  }
+ ],
+ "packets": [
+  {
+   "name": "four channels, every flag, the index about to wrap",
+   "channels": 4,
+   "hex": "01171100feffffff0500000000010000030a0605000000000001ffffff7fffff80000001e240f6040f00002a000007fffff9011170feee90",
+   "expect": {
+    "discontinuity": true,
+    "leadoff_active": true,
+    "mode": "test",
+    "usb_present": true,
+    "samples_lost_before": 17,
+    "index": 4294967294,
+    "device_time": "1099511627781",
+    "leadoff": 10,
+    "gain": 24,
+    "sample_rate_hz": 500,
+    "counts": [
+     [
+      0,
+      1,
+      -1,
+      8388607
+     ],
+     [
+      -8388608,
+      123456,
+      -654321,
+      42
+     ],
+     [
+      7,
+      -7,
+      70000,
+      -70000
+     ]
+    ],
+    "synthetic": false
+   }
+  },
+  {
+   "name": "three channels, generated by the device",
+   "channels": 3,
+   "hex": "040c000007000000090000000000000002000006000001000002000003000004000005000006",
+   "expect": {
+    "discontinuity": false,
+    "leadoff_active": false,
+    "mode": "synthetic",
+    "usb_present": false,
+    "samples_lost_before": 0,
+    "index": 7,
+    "device_time": "9",
+    "leadoff": 0,
+    "gain": 1,
+    "sample_rate_hz": 250,
+    "counts": [
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      4,
+      5,
+      6
+     ]
+    ],
+    "synthetic": true
+   }
+  },
+  {
+   "name": "no samples",
+   "channels": 4,
+   "hex": "0100000000000000000000000000000000000304",
+   "expect": {
+    "discontinuity": false,
+    "leadoff_active": false,
+    "mode": "normal",
+    "usb_present": false,
+    "samples_lost_before": 0,
+    "index": 0,
+    "device_time": "0",
+    "leadoff": 0,
+    "gain": 6,
+    "sample_rate_hz": 1000,
+    "counts": [],
+    "synthetic": false
+   }
+  }
+ ],
+ "predictions": [
+  {
+   "name": "one output",
+   "hex": "02000201d2040000f2277d5201000000dc050123456789abcdef00000000403f",
+   "expect": {
+    "head_slot": 2,
+    "head_id": "0123456789abcdef",
+    "index": 1234,
+    "device_time": "5678901234",
+    "window_samples": 1500,
+    "gap_in_window": false,
+    "duty_reduced": false,
+    "leadoff_in_window": false,
+    "outputs": [
+     0.75
+    ],
+    "input_source": "stream"
+   }
+  },
+  {
+   "name": "a gap in the window",
+   "hex": "02010201d2040000f2277d5201000000dc050123456789abcdef00000000803e",
+   "expect": {
+    "head_slot": 2,
+    "head_id": "0123456789abcdef",
+    "index": 1234,
+    "device_time": "5678901234",
+    "window_samples": 1500,
+    "gap_in_window": true,
+    "duty_reduced": false,
+    "leadoff_in_window": false,
+    "outputs": [
+     0.25
+    ],
+    "input_source": "stream"
+   }
+  },
+  {
+   "name": "an electrode off, duty reduced",
+   "hex": "02060201d2040000f2277d5201000000dc050123456789abcdef00000000003f",
+   "expect": {
+    "head_slot": 2,
+    "head_id": "0123456789abcdef",
+    "index": 1234,
+    "device_time": "5678901234",
+    "window_samples": 1500,
+    "gap_in_window": false,
+    "duty_reduced": true,
+    "leadoff_in_window": true,
+    "outputs": [
+     0.5
+    ],
+    "input_source": "stream"
+   }
+  },
+  {
+   "name": "two outputs, another slot",
+   "hex": "02000102d2040000f2277d5201000000dc050123456789abcdef00000000003e000060c0",
+   "expect": {
+    "head_slot": 1,
+    "head_id": "0123456789abcdef",
+    "index": 1234,
+    "device_time": "5678901234",
+    "window_samples": 1500,
+    "gap_in_window": false,
+    "duty_reduced": false,
+    "leadoff_in_window": false,
+    "outputs": [
+     0.125,
+     -3.5
+    ],
+    "input_source": "stream"
+   }
+  },
+  {
+   "name": "no outputs",
+   "hex": "02000200d2040000f2277d5201000000dc050123456789abcdef0000",
+   "expect": {
+    "head_slot": 2,
+    "head_id": "0123456789abcdef",
+    "index": 1234,
+    "device_time": "5678901234",
+    "window_samples": 1500,
+    "gap_in_window": false,
+    "duty_reduced": false,
+    "leadoff_in_window": false,
+    "outputs": [],
+    "input_source": "stream"
+   }
+  },
+  {
+   "name": "from the natural signal",
+   "hex": "02000201fffffffff2277d5201000000dc050123456789abcdef01000000403f",
+   "expect": {
+    "head_slot": 2,
+    "head_id": "0123456789abcdef",
+    "index": 4294967295,
+    "device_time": "5678901234",
+    "window_samples": 1500,
+    "gap_in_window": false,
+    "duty_reduced": false,
+    "leadoff_in_window": false,
+    "outputs": [
+     0.75
+    ],
+    "input_source": "natural"
+   }
+  }
+ ],
+ "battery": [
+  {
+   "name": "charging",
+   "hex": "480f4001",
+   "expect": {
+    "millivolts": 3912,
+    "percent": 64,
+    "charger": "charging"
+   }
+  },
+  {
+   "name": "no reading",
+   "hex": "0000ff07",
+   "expect": {
+    "millivolts": 0,
+    "percent": null,
+    "charger": "charger state 7"
+   }
+  }
+ ],
+ "heads": [
+  {
+   "name": "five slots, slot 2 selected",
+   "hex": "02050001010011111111111111116275696c7420696e00000000000000000000010102002222222222222222686561642074776f000000000000000000000201010033333333333333337369787465656e206279746573206f6b0000030000000000000000000000000000000000000000000000000000000000040201004444444444444444626164000000000000000000000000000000",
+   "expect": {
+    "active": 2,
+    "heads": [
+     {
+      "slot": 0,
+      "state": "valid",
+      "out_dim": 1,
+      "head_id": "1111111111111111",
+      "name": "built in",
+      "encoder_id": "0000000000000000",
+      "usable": true
+     },
+     {
+      "slot": 1,
+      "state": "valid",
+      "out_dim": 2,
+      "head_id": "2222222222222222",
+      "name": "head two",
+      "encoder_id": "0000000000000000",
+      "usable": true
+     },
+     {
+      "slot": 2,
+      "state": "valid",
+      "out_dim": 1,
+      "head_id": "3333333333333333",
+      "name": "sixteen bytes ok",
+      "encoder_id": "0000000000000000",
+      "usable": true
+     },
+     {
+      "slot": 3,
+      "state": "empty",
+      "out_dim": 0,
+      "head_id": "0000000000000000",
+      "name": "",
+      "encoder_id": "0000000000000000",
+      "usable": false
+     },
+     {
+      "slot": 4,
+      "state": "invalid",
+      "out_dim": 1,
+      "head_id": "4444444444444444",
+      "name": "bad",
+      "encoder_id": "0000000000000000",
+      "usable": false
+     }
+    ]
+   }
+  },
+  {
+   "name": "encoder ids after the records",
+   "hex": "ff020001010011111111111111116275696c7420696e00000000000000000000010102002222222222222222686561642074776f00000000000000000000aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb",
+   "expect": {
+    "active": null,
+    "heads": [
+     {
+      "slot": 0,
+      "state": "valid",
+      "out_dim": 1,
+      "head_id": "1111111111111111",
+      "name": "built in",
+      "encoder_id": "aaaaaaaaaaaaaaaa",
+      "usable": true
+     },
+     {
+      "slot": 1,
+      "state": "valid",
+      "out_dim": 2,
+      "head_id": "2222222222222222",
+      "name": "head two",
+      "encoder_id": "bbbbbbbbbbbbbbbb",
+      "usable": true
+     }
+    ]
+   }
+  }
+ ],
+ "head_encoders": [
+  {
+   "name": "two slots",
+   "hex": "02010102030405060708020000000000000000",
+   "expect": {
+    "1": "0102030405060708",
+    "2": "0000000000000000"
+   }
+  }
+ ],
+ "model_info": [
+  {
+   "name": "the 1.0 length",
+   "hex": "02020100010203040506070803020100",
+   "expect": {
+    "state": "ready",
+    "active_head": 2,
+    "predictions_on": true,
+    "encoder_id": "0102030405060708",
+    "weights_version": [
+     3,
+     2,
+     1
+    ],
+    "input_classes": 1,
+    "tokens_per_channel": 0,
+    "pass_ms": 0,
+    "interval_s": 0,
+    "generator": false,
+    "ready": true
+   }
+  },
+  {
+   "name": "tokens",
+   "hex": "01ff000000000000000000000000000204",
+   "expect": {
+    "state": "no weights",
+    "active_head": null,
+    "predictions_on": false,
+    "encoder_id": "0000000000000000",
+    "weights_version": [
+     0,
+     0,
+     0
+    ],
+    "input_classes": 2,
+    "tokens_per_channel": 4,
+    "pass_ms": 0,
+    "interval_s": 0,
+    "generator": false,
+    "ready": false
+   }
+  },
+  {
+   "name": "the 1.3 length",
+   "hex": "03000000010203040506070806050403017b00020001",
+   "expect": {
+    "state": "updating",
+    "active_head": 0,
+    "predictions_on": false,
+    "encoder_id": "0102030405060708",
+    "weights_version": [
+     6,
+     5,
+     4
+    ],
+    "input_classes": 3,
+    "tokens_per_channel": 1,
+    "pass_ms": 123,
+    "interval_s": 2,
+    "generator": true,
+    "ready": false
+   }
+  }
+ ],
+ "display_names": [
+  {
+   "names": [
+    "Ada's IntoMind One",
+    "",
+    "Ada's IntoMind One",
+    "",
+    "Bo's Blue IntoMind One"
+   ],
+   "expect": [
+    "Ada's IntoMind One",
+    "IntoMind One",
+    "Ada's IntoMind One 2",
+    "IntoMind One 2",
+    "Bo's Blue IntoMind One"
+   ]
+  }
+ ],
+ "microvolts": [
+  {
+   "raw": 1,
+   "vref": 1234567,
+   "gain": 24,
+   "bits": 24,
+   "expect": 0.006132160623868306
+  },
+  {
+   "raw": -8388608,
+   "vref": 1234567,
+   "gain": 1,
+   "bits": 24,
+   "expect": -1234567
+  },
+  {
+   "raw": 8388607,
+   "vref": 7654321,
+   "gain": 6,
+   "bits": 24,
+   "expect": 1275720.0145889719
+  }
+ ],
+ "int24": [
+  {
+   "hex": "7fffff",
+   "expect": 8388607
+  },
+  {
+   "hex": "800000",
+   "expect": -8388608
+  },
+  {
+   "hex": "ffffff",
+   "expect": -1
+  },
+  {
+   "hex": "000001",
+   "expect": 1
+  }
+ ],
+ "malformed": [
+  {
+   "decoder": "decode_device_info",
+   "hex": "0104010203041840420f0087d61200851207000123456789abcd",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_device_info",
+   "hex": "0104010203041840420f0087d61200851207000123456789abcdef3c04050600fedcba98765432100b00de00050d04050a1a4d0038900d007f9698000000000000000000000000000000000001000000",
+   "error": "Invalid"
+  },
+  {
+   "decoder": "decode_device_info",
+   "hex": "0104010203041840420f0087d61200851207000123456789abcdef5004050600fedcba98765432100b00de00050d04050a1a",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_status",
+   "hex": "0000000000000000000000",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_packet",
+   "channels": 4,
+   "hex": "01171100feffffff0500000000010000030a0605000000000001ffffff7fffff80000001e240f6040f00002a000007fffff9011170feee",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_packet",
+   "channels": 4,
+   "hex": "01171100feffffff0500000000010000030a0705000000000001ffffff7fffff80000001e240f6040f00002a000007fffff9011170feee90",
+   "error": "Invalid"
+  },
+  {
+   "decoder": "decode_packet",
+   "channels": 4,
+   "hex": "02171100feffffff0500000000010000030a0605000000000001ffffff7fffff80000001e240f6040f00002a000007fffff9011170feee90",
+   "error": "Invalid"
+  },
+  {
+   "decoder": "decode_packet",
+   "channels": 3,
+   "hex": "01171100feffffff0500000000010000030a0605000000000001ffffff7fffff80000001e240f6040f00002a000007fffff9011170feee90",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_prediction",
+   "hex": "02000201d2040000f2277d5201000000dc050123456789abcdef00",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_prediction",
+   "hex": "02000201d2040000f2277d5201000000dc050123456789abcdef0000000040",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_prediction",
+   "hex": "01000201d2040000f2277d5201000000dc050123456789abcdef00000000403f",
+   "error": "Invalid"
+  },
+  {
+   "decoder": "decode_battery",
+   "hex": "010203",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_heads",
+   "hex": "02",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_heads",
+   "hex": "02050001010011111111111111116275696c7420696e00000000000000000000010102002222222222222222686561642074776f000000000000000000000201010033333333333333337369787465656e206279746573206f6b00000300000000000000000000000000000000000000000000000000000000000402010044444444444444446261640000000000000000000000000000",
+   "error": "Invalid"
+  },
+  {
+   "decoder": "decode_head_encoders",
+   "hex": "0201010203",
+   "error": "Invalid"
+  },
+  {
+   "decoder": "decode_model_info",
+   "hex": "000000000000000000000000000000",
+   "error": "Truncated"
+  },
+  {
+   "decoder": "decode_response",
+   "hex": "01",
+   "error": "Truncated"
+  }
+ ]
+}

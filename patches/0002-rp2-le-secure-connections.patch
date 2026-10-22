@@ -1,0 +1,36 @@
+From: IntoMind
+Subject: rp2: LE Secure Connections with micro-ecc, for devices that pair no other way.
+
+---
+diff --git a/extmod/btstack/btstack.cmake b/extmod/btstack/btstack.cmake
+index 70a6a47a3..20aa7fd8f 100644
+--- a/extmod/btstack/btstack.cmake
++++ b/extmod/btstack/btstack.cmake
+@@ -12,9 +12,11 @@ target_include_directories(micropy_extmod_btstack INTERFACE
+     ${BTSTACK_LIB_DIR}/3rd-party/bluedroid/encoder/include
+     ${BTSTACK_LIB_DIR}/3rd-party/md5
+     ${BTSTACK_LIB_DIR}/3rd-party/yxml
++    ${BTSTACK_LIB_DIR}/3rd-party/micro-ecc
+ )
+ 
+ target_sources(micropy_extmod_btstack INTERFACE
++    ${BTSTACK_LIB_DIR}/3rd-party/micro-ecc/uECC.c
+     ${BTSTACK_LIB_DIR}/platform/embedded/hci_dump_embedded_stdout.c
+     ${BTSTACK_LIB_DIR}/src/ble/gatt-service/ancs_client.c
+     ${BTSTACK_LIB_DIR}/src/ble/att_db.c
+diff --git a/ports/rp2/btstack_inc/btstack_config.h b/ports/rp2/btstack_inc/btstack_config.h
+index ec7cd7fb7..a4da30d8a 100644
+--- a/ports/rp2/btstack_inc/btstack_config.h
++++ b/ports/rp2/btstack_inc/btstack_config.h
+@@ -6,4 +6,11 @@
+ 
+ #include "btstack_config_common.h"
+ 
++#if MICROPY_PY_BLUETOOTH_ENABLE_PAIRING_BONDING
++// LE Secure Connections, for devices that pair no other way, with the
++// elliptic curve arithmetic done in software by micro-ecc.
++#define ENABLE_LE_SECURE_CONNECTIONS
++#define ENABLE_MICRO_ECC_FOR_LE_SECURE_CONNECTIONS
++#endif
++
+ #endif
